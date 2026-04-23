@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.phone {
+  width: 360px;
+  height: 640px;
+  background: #1e1e1e;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.user, .bot {
+  padding: 10px;
+  margin: 6px;
+  border-radius: 12px;
+  max-width: 75%;
+}
+
+.user {
+  background: #007aff;
+  color: white;
+  margin-left: auto;
+}
+
+.bot {
+  background: #333;
+  color: white;
+}
+
+input {
+  border: none;
+  padding: 15px;
+  outline: none;
+}
+
+.dot {
+  height: 6px;
+  width: 6px;
+  margin: 2px;
+  background: white;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.4s infinite both;
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background: #111;
+  color: white;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 8px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  font-size: 12px;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "thearapy_chat_bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start:ai": "cd ai_service && uvicorn main:app --reload --port 8001",
+    "start:backend": "wait-on http://127.0.0.1:8001 && cd backend && npm start",
+    "start:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently -k -n AI,BACKEND,FRONTEND -c green,blue,yellow \"npm run start:ai\" \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "devDependencies": {
+    "wait-on": "^9.0.5"
+  }
+}
