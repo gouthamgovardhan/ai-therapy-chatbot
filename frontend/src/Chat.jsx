@@ -5,7 +5,7 @@ import Typing from "./Typing";
 export default function Chat() {
   const [messages, setMessages] = useState([
     {
-      text: "Hey, how are you feeling today? Do you want to talk it out or just have someone listen?",
+      text: "hi, how are you feeling today? Do you want to talk it out or just have someone listen?",
       bot: true
     }
   ]);
